@@ -22,8 +22,10 @@ def get_info():
         user_data['track'] = track
 
     #getting the current day and UTC time
-    current_day = "Sunday"
-    utc_time = "2023-09-10T07:00:18Z"
+    #current_day = "Sunday"
+    #utc_time = "2023-09-10T07:00:18Z"
+    current_day = datetime.datetime.now().strftime("%A")
+    utc_time = datetime.datetime.utcnow().strftime("%Y-%m-%dT%H:%M:%SZ")
 
     # Creating a GitHub URLs for the provided track
     github_repo_url = f"https://github.com/busayo-I/Hngx.git"
